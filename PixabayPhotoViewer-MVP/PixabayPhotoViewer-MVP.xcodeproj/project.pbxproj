@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD72EE66271F098E0019955F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72EE65271F098E0019955F /* AppDelegate.swift */; };
+		FD72EE68271F098E0019955F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72EE67271F098E0019955F /* SceneDelegate.swift */; };
+		FD72EE6A271F098E0019955F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72EE69271F098E0019955F /* ViewController.swift */; };
+		FD72EE6D271F098E0019955F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD72EE6B271F098E0019955F /* Main.storyboard */; };
+		FD72EE6F271F098F0019955F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD72EE6E271F098F0019955F /* Assets.xcassets */; };
+		FD72EE72271F098F0019955F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD72EE70271F098F0019955F /* LaunchScreen.storyboard */; };
+		FD72EE7D271F098F0019955F /* PixabayPhotoViewer_MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72EE7C271F098F0019955F /* PixabayPhotoViewer_MVPTests.swift */; };
+		FD72EE88271F098F0019955F /* PixabayPhotoViewer_MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72EE87271F098F0019955F /* PixabayPhotoViewer_MVPUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD72EE79271F098F0019955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD72EE5A271F098E0019955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD72EE61271F098E0019955F;
+			remoteInfo = "PixabayPhotoViewer-MVP";
+		};
+		FD72EE84271F098F0019955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD72EE5A271F098E0019955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD72EE61271F098E0019955F;
+			remoteInfo = "PixabayPhotoViewer-MVP";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD72EE62271F098E0019955F /* PixabayPhotoViewer-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PixabayPhotoViewer-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD72EE65271F098E0019955F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD72EE67271F098E0019955F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FD72EE69271F098E0019955F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD72EE6C271F098E0019955F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD72EE6E271F098F0019955F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD72EE71271F098F0019955F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD72EE73271F098F0019955F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD72EE78271F098F0019955F /* PixabayPhotoViewer-MVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PixabayPhotoViewer-MVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD72EE7C271F098F0019955F /* PixabayPhotoViewer_MVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayPhotoViewer_MVPTests.swift; sourceTree = "<group>"; };
+		FD72EE7E271F098F0019955F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD72EE83271F098F0019955F /* PixabayPhotoViewer-MVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PixabayPhotoViewer-MVPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD72EE87271F098F0019955F /* PixabayPhotoViewer_MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayPhotoViewer_MVPUITests.swift; sourceTree = "<group>"; };
+		FD72EE89271F098F0019955F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD72EE5F271F098E0019955F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE75271F098F0019955F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE80271F098F0019955F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD72EE59271F098E0019955F = {
+			isa = PBXGroup;
+			children = (
+				FD72EE64271F098E0019955F /* PixabayPhotoViewer-MVP */,
+				FD72EE7B271F098F0019955F /* PixabayPhotoViewer-MVPTests */,
+				FD72EE86271F098F0019955F /* PixabayPhotoViewer-MVPUITests */,
+				FD72EE63271F098E0019955F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD72EE63271F098E0019955F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD72EE62271F098E0019955F /* PixabayPhotoViewer-MVP.app */,
+				FD72EE78271F098F0019955F /* PixabayPhotoViewer-MVPTests.xctest */,
+				FD72EE83271F098F0019955F /* PixabayPhotoViewer-MVPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD72EE64271F098E0019955F /* PixabayPhotoViewer-MVP */ = {
+			isa = PBXGroup;
+			children = (
+				FD72EE65271F098E0019955F /* AppDelegate.swift */,
+				FD72EE67271F098E0019955F /* SceneDelegate.swift */,
+				FD72EE69271F098E0019955F /* ViewController.swift */,
+				FD72EE6B271F098E0019955F /* Main.storyboard */,
+				FD72EE6E271F098F0019955F /* Assets.xcassets */,
+				FD72EE70271F098F0019955F /* LaunchScreen.storyboard */,
+				FD72EE73271F098F0019955F /* Info.plist */,
+			);
+			path = "PixabayPhotoViewer-MVP";
+			sourceTree = "<group>";
+		};
+		FD72EE7B271F098F0019955F /* PixabayPhotoViewer-MVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD72EE7C271F098F0019955F /* PixabayPhotoViewer_MVPTests.swift */,
+				FD72EE7E271F098F0019955F /* Info.plist */,
+			);
+			path = "PixabayPhotoViewer-MVPTests";
+			sourceTree = "<group>";
+		};
+		FD72EE86271F098F0019955F /* PixabayPhotoViewer-MVPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD72EE87271F098F0019955F /* PixabayPhotoViewer_MVPUITests.swift */,
+				FD72EE89271F098F0019955F /* Info.plist */,
+			);
+			path = "PixabayPhotoViewer-MVPUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD72EE61271F098E0019955F /* PixabayPhotoViewer-MVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD72EE8C271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVP" */;
+			buildPhases = (
+				FD72EE5E271F098E0019955F /* Sources */,
+				FD72EE5F271F098E0019955F /* Frameworks */,
+				FD72EE60271F098E0019955F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PixabayPhotoViewer-MVP";
+			productName = "PixabayPhotoViewer-MVP";
+			productReference = FD72EE62271F098E0019955F /* PixabayPhotoViewer-MVP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD72EE77271F098F0019955F /* PixabayPhotoViewer-MVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD72EE8F271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVPTests" */;
+			buildPhases = (
+				FD72EE74271F098F0019955F /* Sources */,
+				FD72EE75271F098F0019955F /* Frameworks */,
+				FD72EE76271F098F0019955F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD72EE7A271F098F0019955F /* PBXTargetDependency */,
+			);
+			name = "PixabayPhotoViewer-MVPTests";
+			productName = "PixabayPhotoViewer-MVPTests";
+			productReference = FD72EE78271F098F0019955F /* PixabayPhotoViewer-MVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD72EE82271F098F0019955F /* PixabayPhotoViewer-MVPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD72EE92271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVPUITests" */;
+			buildPhases = (
+				FD72EE7F271F098F0019955F /* Sources */,
+				FD72EE80271F098F0019955F /* Frameworks */,
+				FD72EE81271F098F0019955F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD72EE85271F098F0019955F /* PBXTargetDependency */,
+			);
+			name = "PixabayPhotoViewer-MVPUITests";
+			productName = "PixabayPhotoViewer-MVPUITests";
+			productReference = FD72EE83271F098F0019955F /* PixabayPhotoViewer-MVPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD72EE5A271F098E0019955F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FD72EE61271F098E0019955F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FD72EE77271F098F0019955F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FD72EE61271F098E0019955F;
+					};
+					FD72EE82271F098F0019955F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FD72EE61271F098E0019955F;
+					};
+				};
+			};
+			buildConfigurationList = FD72EE5D271F098E0019955F /* Build configuration list for PBXProject "PixabayPhotoViewer-MVP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD72EE59271F098E0019955F;
+			productRefGroup = FD72EE63271F098E0019955F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD72EE61271F098E0019955F /* PixabayPhotoViewer-MVP */,
+				FD72EE77271F098F0019955F /* PixabayPhotoViewer-MVPTests */,
+				FD72EE82271F098F0019955F /* PixabayPhotoViewer-MVPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD72EE60271F098E0019955F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD72EE72271F098F0019955F /* LaunchScreen.storyboard in Resources */,
+				FD72EE6F271F098F0019955F /* Assets.xcassets in Resources */,
+				FD72EE6D271F098E0019955F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE76271F098F0019955F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE81271F098F0019955F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD72EE5E271F098E0019955F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD72EE6A271F098E0019955F /* ViewController.swift in Sources */,
+				FD72EE66271F098E0019955F /* AppDelegate.swift in Sources */,
+				FD72EE68271F098E0019955F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE74271F098F0019955F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD72EE7D271F098F0019955F /* PixabayPhotoViewer_MVPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD72EE7F271F098F0019955F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD72EE88271F098F0019955F /* PixabayPhotoViewer_MVPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD72EE7A271F098F0019955F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD72EE61271F098E0019955F /* PixabayPhotoViewer-MVP */;
+			targetProxy = FD72EE79271F098F0019955F /* PBXContainerItemProxy */;
+		};
+		FD72EE85271F098F0019955F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD72EE61271F098E0019955F /* PixabayPhotoViewer-MVP */;
+			targetProxy = FD72EE84271F098F0019955F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD72EE6B271F098E0019955F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD72EE6C271F098E0019955F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD72EE70271F098F0019955F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD72EE71271F098F0019955F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD72EE8A271F098F0019955F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD72EE8B271F098F0019955F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD72EE8D271F098F0019955F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD72EE8E271F098F0019955F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD72EE90271F098F0019955F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixabayPhotoViewer-MVP.app/PixabayPhotoViewer-MVP";
+			};
+			name = Debug;
+		};
+		FD72EE91271F098F0019955F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixabayPhotoViewer-MVP.app/PixabayPhotoViewer-MVP";
+			};
+			name = Release;
+		};
+		FD72EE93271F098F0019955F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PixabayPhotoViewer-MVP";
+			};
+			name = Debug;
+		};
+		FD72EE94271F098F0019955F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWY8CP674Q;
+				INFOPLIST_FILE = "PixabayPhotoViewer-MVPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.PixabayPhotoViewer-MVPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PixabayPhotoViewer-MVP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD72EE5D271F098E0019955F /* Build configuration list for PBXProject "PixabayPhotoViewer-MVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD72EE8A271F098F0019955F /* Debug */,
+				FD72EE8B271F098F0019955F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD72EE8C271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD72EE8D271F098F0019955F /* Debug */,
+				FD72EE8E271F098F0019955F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD72EE8F271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD72EE90271F098F0019955F /* Debug */,
+				FD72EE91271F098F0019955F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD72EE92271F098F0019955F /* Build configuration list for PBXNativeTarget "PixabayPhotoViewer-MVPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD72EE93271F098F0019955F /* Debug */,
+				FD72EE94271F098F0019955F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD72EE5A271F098E0019955F /* Project object */;
+}
