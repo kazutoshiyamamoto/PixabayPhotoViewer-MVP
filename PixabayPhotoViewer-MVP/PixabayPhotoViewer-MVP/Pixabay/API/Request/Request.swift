@@ -12,7 +12,7 @@ protocol Request {
     
     var baseURL: URL { get }
     var method: HttpMethod { get }
-    var path: String { get }
+    var key: String { get }
     var headerFields: [String: String] { get }
     var queryParameters: [String: String]? { get }
 }
@@ -20,6 +20,10 @@ protocol Request {
 extension Request {
     var baseURL: URL {
         return URL(string: "https://pixabay.com/api/")!
+    }
+    
+    var key: String {
+        return ""
     }
     
     var headerFields: [String: String] {

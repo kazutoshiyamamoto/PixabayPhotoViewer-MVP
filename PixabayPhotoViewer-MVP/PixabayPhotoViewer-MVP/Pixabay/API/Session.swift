@@ -24,7 +24,7 @@ final class Session {
     
     @discardableResult
     func send<T: Request>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> ()) -> URLSessionTask? {
-        let url = request.baseURL.appendingPathComponent(request.path)
+        let url = request.baseURL.appendingPathComponent(request.key)
 
         guard var componets = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             completion(.failure(SessionError.failedToCreateComponents(url)))

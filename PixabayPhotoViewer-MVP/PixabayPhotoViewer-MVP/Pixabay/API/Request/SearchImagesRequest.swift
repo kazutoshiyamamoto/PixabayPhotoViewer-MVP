@@ -11,18 +11,15 @@ struct SearchImagesRequest: Request {
     typealias Response = ItemsResponse<Image>
 
     let method: HttpMethod = .get
-    let path = ""
 
     var queryParameters: [String : String]? {
-        let params: [String: String] = ["q": query, "key": key]
+        let params: [String: String] = ["q": query]
         return params
     }
 
     let query: String
-    let key: String
 
-    init(query: String, key: String) {
+    init(query: String) {
         self.query = query
-        self.key = key
     }
 }
