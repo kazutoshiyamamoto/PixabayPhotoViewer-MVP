@@ -21,6 +21,7 @@
 		FDF23291272054DD00585739 /* SearchImagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF23290272054DD00585739 /* SearchImagesRequest.swift */; };
 		FDF232932720573C00585739 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF232922720573C00585739 /* Session.swift */; };
 		FDF232952721A46900585739 /* SearchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF232942721A46900585739 /* SearchImageModel.swift */; };
+		FDF23297272302B700585739 /* SearchImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF23296272302B700585739 /* SearchImagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FDF23290272054DD00585739 /* SearchImagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagesRequest.swift; sourceTree = "<group>"; };
 		FDF232922720573C00585739 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FDF232942721A46900585739 /* SearchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageModel.swift; sourceTree = "<group>"; };
+		FDF23296272302B700585739 /* SearchImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				FD72EE6E271F098F0019955F /* Assets.xcassets */,
 				FD72EE70271F098F0019955F /* LaunchScreen.storyboard */,
 				FD72EE73271F098F0019955F /* Info.plist */,
+				FDF23296272302B700585739 /* SearchImagePresenter.swift */,
 				FDF232942721A46900585739 /* SearchImageModel.swift */,
 				FDF2328527204D5D00585739 /* Pixabay */,
 			);
@@ -324,6 +327,7 @@
 				FD72EE66271F098E0019955F /* AppDelegate.swift in Sources */,
 				FDF232952721A46900585739 /* SearchImageModel.swift in Sources */,
 				FD72EE68271F098E0019955F /* SceneDelegate.swift in Sources */,
+				FDF23297272302B700585739 /* SearchImagePresenter.swift in Sources */,
 				FDF23291272054DD00585739 /* SearchImagesRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
