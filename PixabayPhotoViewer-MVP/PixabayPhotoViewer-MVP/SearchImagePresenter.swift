@@ -23,4 +23,12 @@ protocol SearchImagePresenterOutput: AnyObject {
 final class SearchImagePresenter: SearchImagePresenterInput {
     private(set) var images: [Image] = []
     
+    private weak var view: SearchImagePresenterOutput!
+    private var model: SearchImageModelInput
+    
+    init(view: SearchImagePresenterOutput, model: SearchImageModelInput) {
+        self.view = view
+        self.model = model
+    }
+    
 }
