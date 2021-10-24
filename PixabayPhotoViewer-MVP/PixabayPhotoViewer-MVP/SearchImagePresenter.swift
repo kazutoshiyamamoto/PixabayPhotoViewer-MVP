@@ -20,4 +20,7 @@ protocol SearchImagePresenterOutput: AnyObject {
     func transitionToImageDetail(imageId: Int)
 }
 
+final class SearchImagePresenter: SearchImagePresenterInput {
+    private(set) var images: [Image] = []
+    
 }
