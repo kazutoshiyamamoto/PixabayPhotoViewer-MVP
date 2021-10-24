@@ -31,4 +31,8 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         self.model = model
     }
     
+    var numberOfImages: Int {
+        return images.count
+    }
+    
 }
