@@ -45,4 +45,23 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         view.transitionToImageDetail(imageId: image.id)
     }
     
+    func didTapSearchButton(text: String?) {
+        guard let query = text else { return }
+        guard !query.isEmpty else { return }
+        
+        model.fetchImage(query: query) { [weak self] result in
+            switch result {
+            case .success(let images):
+                self?.images = images
+                
+                DispatchQueue.main.async {
+                    self?.view.updateImages(images)
+                }
+            case .failure(let error):
+                // TODO: Error Handling
+                print(error)
+                ()
+            }
+        }
+    }
 }
