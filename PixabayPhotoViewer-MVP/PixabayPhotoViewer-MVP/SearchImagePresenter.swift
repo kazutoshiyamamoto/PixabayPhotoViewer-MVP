@@ -14,7 +14,10 @@ protocol SearchImagePresenterInput {
     func didTapSearchButton(text: String?)
 }
 
+// Presenterの出力値を使うViewの処理
 protocol SearchImagePresenterOutput: AnyObject {
-    func updateImages(_ users: [Image])
-    func transitionToImageDetail(userName: String)
+    func updateImages(_ images: [Image])
+    func transitionToImageDetail(imageId: Int)
+}
+
 }
