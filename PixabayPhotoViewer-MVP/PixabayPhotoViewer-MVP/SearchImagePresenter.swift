@@ -35,4 +35,9 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         return images.count
     }
     
+    func image(forRow row: Int) -> Image? {
+        guard row < images.count else { return nil }
+        return images[row]
+    }
+    
 }
