@@ -40,4 +40,9 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         return images[row]
     }
     
+    func didSelectRow(at indexPath: IndexPath) {
+        guard let image = image(forRow: indexPath.row) else { return }
+        view.transitionToImageDetail(imageId: image.id)
+    }
+    
 }
