@@ -11,7 +11,7 @@ struct Image: Codable {
     var id: Int
     var tag: String
     var user: String
-    var previewURL: String
+    var previewURL: URL
     
     init(id: Int,
          tag: String,
