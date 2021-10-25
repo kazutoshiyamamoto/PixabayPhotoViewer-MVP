@@ -16,7 +16,6 @@ class ImageCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         task?.cancel()
         task = nil
         imageView?.image = nil
