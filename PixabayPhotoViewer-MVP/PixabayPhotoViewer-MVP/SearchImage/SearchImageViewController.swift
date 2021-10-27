@@ -29,3 +29,9 @@ class SearchImageViewController: UIViewController {
     }
 }
 
+extension SearchImageViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter.didTapSearchButton(text: searchBar.text)
+    }
+}
+
