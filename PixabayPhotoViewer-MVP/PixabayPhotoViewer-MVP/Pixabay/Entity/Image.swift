@@ -16,7 +16,7 @@ struct Image: Codable {
     init(id: Int,
          tag: String,
          user: String,
-         previewURL: String) {
+         previewURL: URL) {
         self.id = id
         self.tag = tag
         self.user = user
