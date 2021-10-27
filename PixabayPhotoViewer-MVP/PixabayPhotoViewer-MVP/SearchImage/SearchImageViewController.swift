@@ -43,3 +43,10 @@ extension SearchImageViewController: UITableViewDelegate {
     }
 }
 
+extension SearchImageViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfImages
+    }
+    
+}
