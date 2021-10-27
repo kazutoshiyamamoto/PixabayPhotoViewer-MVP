@@ -61,4 +61,10 @@ extension SearchImageViewController: UITableViewDataSource {
     }
 }
 
+extension SearchImageViewController: SearchImagePresenterOutput {    
+    func updateImages(_ users: [Image]) {
+        tableView.reloadData()
+    }
+    
 }
+
