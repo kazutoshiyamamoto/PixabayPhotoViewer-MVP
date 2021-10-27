@@ -49,4 +49,16 @@ extension SearchImageViewController: UITableViewDataSource {
         return presenter.numberOfImages
     }
     
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell") as! ImageCell
+        
+        if let image = presenter.image(forRow: indexPath.row) {
+            cell.configure(image: image)
+        }
+        
+        return cell
+    }
+}
+
 }
