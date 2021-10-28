@@ -13,7 +13,10 @@ struct SearchImagesRequest: Request {
     let method: HttpMethod = .get
 
     var queryParameters: [String : String]? {
-        let params: [String: String] = ["q": query]
+        let params: [String: String] = [
+            "key": apiKey,
+            "q": query
+        ]
         return params
     }
 
