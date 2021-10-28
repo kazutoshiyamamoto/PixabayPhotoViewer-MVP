@@ -8,9 +8,9 @@
 import Foundation
 
 struct ItemsResponse<Item: Decodable>: Decodable {
-    let items: [Item]
+    let hits: [Item]
     
-    init(items: [Item]) {
-        self.items = items
+    init(hits: [Item]) {
+        self.hits = hits
     }
 }

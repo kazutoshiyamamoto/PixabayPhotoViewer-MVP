@@ -9,16 +9,16 @@ import Foundation
 
 struct Image: Codable {
     var id: Int
-    var tag: String
+    var tags: String
     var user: String
     var previewURL: URL
     
     init(id: Int,
-         tag: String,
+         tags: String,
          user: String,
          previewURL: URL) {
         self.id = id
-        self.tag = tag
+        self.tags = tags
         self.user = user
         self.previewURL = previewURL
     }

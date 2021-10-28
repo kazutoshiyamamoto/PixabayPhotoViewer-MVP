@@ -23,7 +23,7 @@ final class SearchImageModel: SearchImageModelInput {
         Session().send(request) { result in
             switch result {
             case .success(let response):
-                completion(.success(response.items))
+                completion(.success(response.hits))
             case .failure(let error):
                 completion(.failure(error))
             }
