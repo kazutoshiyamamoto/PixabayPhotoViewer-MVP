@@ -23,8 +23,6 @@ class SearchImageViewController: UIViewController {
     }
     
     private func setup() {
-        tableView.estimatedRowHeight = 64
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: "ImageCell", bundle: nil), forCellReuseIdentifier: "ImageCell")
     }
 }
