@@ -2,15 +2,14 @@
 //  ImageCell.swift
 //  PixabayPhotoViewer-MVP
 //
-//  Created by home on 2021/10/25.
+//  Created by home on 2021/10/29.
 //
 
 import UIKit
 
-class ImageCell: UITableViewCell {
+class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     
     private var task: URLSessionTask?
     
@@ -18,7 +17,7 @@ class ImageCell: UITableViewCell {
         super.prepareForReuse()
         task?.cancel()
         task = nil
-        imageView?.image = nil
+        photoImageView.image = nil
     }
     
     func configure(image: Image) {
@@ -43,7 +42,5 @@ class ImageCell: UITableViewCell {
             task.resume()
             return task
         }()
-        
-        nameLabel.text = image.user
     }
 }

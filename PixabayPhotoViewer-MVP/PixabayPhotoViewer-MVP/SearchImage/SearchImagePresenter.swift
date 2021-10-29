@@ -9,8 +9,8 @@ import Foundation
 
 protocol SearchImagePresenterInput {
     var numberOfImages: Int { get }
-    func image(forRow row: Int) -> Image?
-    func didSelectRow(at indexPath: IndexPath)
+    func image(forItem item: Int) -> Image?
+    func didSelectItem(at indexPath: IndexPath)
     func didTapSearchButton(text: String?)
 }
 
@@ -35,13 +35,13 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         return images.count
     }
     
-    func image(forRow row: Int) -> Image? {
-        guard row < images.count else { return nil }
-        return images[row]
+    func image(forItem item: Int) -> Image? {
+        guard item < images.count else { return nil }
+        return images[item]
     }
     
-    func didSelectRow(at indexPath: IndexPath) {
-        guard let image = image(forRow: indexPath.row) else { return }
+    func didSelectItem(at indexPath: IndexPath) {
+        guard let image = image(forItem: indexPath.row) else { return }
         view.transitionToImageDetail(imageId: image.id)
     }
     

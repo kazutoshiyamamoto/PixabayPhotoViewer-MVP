@@ -23,31 +23,38 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="AeM-ij-3UP"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g7x-8E-lIi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eM5-VS-HFn">
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="exU-V9-ZLn">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bxb-2N-sfY"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K1E-6S-2HZ"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rzB-AG-73C"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qsb-yQ-joO"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YZk-p6-J4V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Al-hb-RJq"/>
                             <constraint firstItem="YZk-p6-J4V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kjs-Ei-tMM"/>
-                            <constraint firstItem="g7x-8E-lIi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pr5-XZ-M0W"/>
-                            <constraint firstItem="g7x-8E-lIi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ufy-yO-gQn"/>
-                            <constraint firstItem="g7x-8E-lIi" firstAttribute="top" secondItem="YZk-p6-J4V" secondAttribute="bottom" id="XU3-PO-0Uk"/>
+                            <constraint firstItem="eM5-VS-HFn" firstAttribute="top" secondItem="YZk-p6-J4V" secondAttribute="bottom" id="R67-et-0b0"/>
+                            <constraint firstItem="eM5-VS-HFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bCz-9U-jE3"/>
+                            <constraint firstItem="eM5-VS-HFn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d0u-DK-IN2"/>
+                            <constraint firstItem="eM5-VS-HFn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eOz-jj-Dsg"/>
                             <constraint firstItem="YZk-p6-J4V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fzd-CX-PNZ"/>
-                            <constraint firstItem="g7x-8E-lIi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n5T-1x-doT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search Pixabay Image" id="Bkn-qL-6rh"/>
                     <connections>
+                        <outlet property="collectionView" destination="eM5-VS-HFn" id="J9E-eS-C6H"/>
                         <outlet property="searchBar" destination="YZk-p6-J4V" id="DXh-Ei-yv6"/>
-                        <outlet property="tableView" destination="g7x-8E-lIi" id="CqD-DH-znE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
