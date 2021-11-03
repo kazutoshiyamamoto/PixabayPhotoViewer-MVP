@@ -8,10 +8,14 @@
 import Foundation
 
 protocol SearchImagePresenterInput {
+    var query: String? { get }
+    var pagination: Pagination? { get }
+    var isFetching: Bool { get }
     var numberOfImages: Int { get }
     func image(forItem item: Int) -> Image?
     func didSelectItem(at indexPath: IndexPath)
-    func didTapSearchButton(text: String?)
+    func searchImages(query: String?, page: Int)
+    func clearImages()
 }
 
 // Presenterの出力値を使うViewの処理
@@ -21,6 +25,10 @@ protocol SearchImagePresenterOutput: AnyObject {
 }
 
 final class SearchImagePresenter: SearchImagePresenterInput {
+    private(set) var query: String?
+    private(set) var pagination: Pagination?
+    private(set) var isFetching = false
+    
     private(set) var images: [Image] = []
     
     private weak var view: SearchImagePresenterOutput!
@@ -45,17 +53,22 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         view.transitionToImageDetail(imageId: image.id)
     }
     
-    func didTapSearchButton(text: String?) {
-        guard let query = text else { return }
+    func searchImages(query: String?, page: Int) {
+        guard let query = query else { return }
         guard !query.isEmpty else { return }
-        
-        model.fetchImage(query: query) { [weak self] result in
+
+        self.isFetching = true
+
+        model.fetchImage(query: query, page: page) { [weak self] result in
             switch result {
-            case .success(let images):
-                self?.images = images
-                
+            case .success(let response):
+                self?.images.append(contentsOf: response.0)
+                self?.query = query
+                self?.pagination = response.1
+
                 DispatchQueue.main.async {
-                    self?.view.updateImages(images)
+                    self?.view.updateImages(self!.images)
+                    self?.isFetching = false
                 }
             case .failure(let error):
                 // TODO: Error Handling
@@ -63,5 +76,9 @@ final class SearchImagePresenter: SearchImagePresenterInput {
                 ()
             }
         }
+    }
+    
+    func clearImages() {
+        self.images = []
     }
 }

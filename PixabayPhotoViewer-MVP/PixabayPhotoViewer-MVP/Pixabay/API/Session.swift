@@ -23,9 +23,9 @@ final class Session {
     }
     
     @discardableResult
-    func send<T: Request>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> ()) -> URLSessionTask? {
+    func send<T: Request>(_ request: T, completion: @escaping (Result<(T.Response, Pagination), Error>) -> ()) -> URLSessionTask? {
         let url = request.baseURL
-
+        
         guard var componets = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             completion(.failure(SessionError.failedToCreateComponents(url)))
             return nil
@@ -60,9 +60,17 @@ final class Session {
                 return
             }
             
+            let pagination: Pagination
+            if let page = request.queryParameters?["page"] {
+                let next = Int(page)! + 1
+                pagination = Pagination(next: next)
+            } else {
+                pagination = Pagination(next: nil)
+            }
+            
             do {
                 let object = try JSONDecoder().decode(T.Response.self, from: data)
-                completion(.success(object))
+                completion(.success((object, pagination)))
             } catch {
                 completion(.failure(error))
             }

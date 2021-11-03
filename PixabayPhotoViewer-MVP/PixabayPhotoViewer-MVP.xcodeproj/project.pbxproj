@@ -24,6 +24,7 @@
 		FDF23297272302B700585739 /* SearchImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF23296272302B700585739 /* SearchImagePresenter.swift */; };
 		FDF232A1272BE47E00585739 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2329F272BE47E00585739 /* ImageCell.swift */; };
 		FDF232A2272BE47E00585739 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF232A0272BE47E00585739 /* ImageCell.xib */; };
+		FDF4958027322C0600C6466F /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4957F27322C0600C6466F /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		FDF23296272302B700585739 /* SearchImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagePresenter.swift; sourceTree = "<group>"; };
 		FDF2329F272BE47E00585739 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		FDF232A0272BE47E00585739 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		FDF4957F27322C0600C6466F /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF2328B2720516C00585739 /* ItemsResponse.swift */,
+				FDF4957F27322C0600C6466F /* Pagination.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				FD72EE66271F098E0019955F /* AppDelegate.swift in Sources */,
 				FDF232952721A46900585739 /* SearchImageModel.swift in Sources */,
 				FD72EE68271F098E0019955F /* SceneDelegate.swift in Sources */,
+				FDF4958027322C0600C6466F /* Pagination.swift in Sources */,
 				FDF23297272302B700585739 /* SearchImagePresenter.swift in Sources */,
 				FDF23291272054DD00585739 /* SearchImagesRequest.swift in Sources */,
 			);
