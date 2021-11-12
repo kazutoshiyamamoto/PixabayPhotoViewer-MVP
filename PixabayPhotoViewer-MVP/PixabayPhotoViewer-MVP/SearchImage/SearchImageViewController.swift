@@ -87,12 +87,23 @@ extension SearchImageViewController: UICollectionViewDataSource {
 }
 
 extension SearchImageViewController: SearchImagePresenterOutput {
-    func updateImages(_ users: [Image]) {
+    func updateImages(_ images: [Image]) {
         collectionView.reloadData()
     }
     
-    func transitionToImageDetail(imageId: Int) {
+    func transitionToImageDetail(image: Image) {
+        let imageDetailVC = UIStoryboard(
+            name: "ImageDetail",
+            bundle: nil)
+            .instantiateInitialViewController() as! ImageDetailViewController
+        let model = ImageDetailModel()
+        let presenter = ImageDetailPresenter(
+            image: image,
+            view: imageDetailVC,
+            model: model)
+        imageDetailVC.inject(presenter: presenter)
         
+        navigationController?.pushViewController(imageDetailVC, animated: true)
     }
 }
 

@@ -25,6 +25,10 @@
 		FDF232A1272BE47E00585739 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2329F272BE47E00585739 /* ImageCell.swift */; };
 		FDF232A2272BE47E00585739 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF232A0272BE47E00585739 /* ImageCell.xib */; };
 		FDF4958027322C0600C6466F /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4957F27322C0600C6466F /* Pagination.swift */; };
+		FDF495832736523D00C6466F /* ImageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF495822736523D00C6466F /* ImageDetail.storyboard */; };
+		FDF495852736527100C6466F /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF495842736527100C6466F /* ImageDetailViewController.swift */; };
+		FDF495872736529300C6466F /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF495862736529300C6466F /* ImageDetailPresenter.swift */; };
+		FDF49589273652A100C6466F /* ImageDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF49588273652A100C6466F /* ImageDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		FDF2329F272BE47E00585739 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		FDF232A0272BE47E00585739 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		FDF4957F27322C0600C6466F /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		FDF495822736523D00C6466F /* ImageDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDetail.storyboard; sourceTree = "<group>"; };
+		FDF495842736527100C6466F /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		FDF495862736529300C6466F /* ImageDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPresenter.swift; sourceTree = "<group>"; };
+		FDF49588273652A100C6466F /* ImageDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				FD72EE65271F098E0019955F /* AppDelegate.swift */,
 				FD72EE67271F098E0019955F /* SceneDelegate.swift */,
 				FDF232982725619200585739 /* SearchImage */,
+				FDF495812736520F00C6466F /* ImageDetail */,
 				FDF2328527204D5D00585739 /* Pixabay */,
 				FD72EE6E271F098F0019955F /* Assets.xcassets */,
 				FD72EE70271F098F0019955F /* LaunchScreen.storyboard */,
@@ -204,6 +213,17 @@
 				FDF232A0272BE47E00585739 /* ImageCell.xib */,
 			);
 			path = SearchImage;
+			sourceTree = "<group>";
+		};
+		FDF495812736520F00C6466F /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FDF495822736523D00C6466F /* ImageDetail.storyboard */,
+				FDF495842736527100C6466F /* ImageDetailViewController.swift */,
+				FDF495862736529300C6466F /* ImageDetailPresenter.swift */,
+				FDF49588273652A100C6466F /* ImageDetailModel.swift */,
+			);
+			path = ImageDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +332,7 @@
 				FD72EE72271F098F0019955F /* LaunchScreen.storyboard in Resources */,
 				FD72EE6F271F098F0019955F /* Assets.xcassets in Resources */,
 				FDF232A2272BE47E00585739 /* ImageCell.xib in Resources */,
+				FDF495832736523D00C6466F /* ImageDetail.storyboard in Resources */,
 				FD72EE6D271F098E0019955F /* SearchImage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,11 +359,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF2328C2720516C00585739 /* ItemsResponse.swift in Sources */,
+				FDF495852736527100C6466F /* ImageDetailViewController.swift in Sources */,
 				FDF2328F272051A400585739 /* Request.swift in Sources */,
 				FD72EE6A271F098E0019955F /* SearchImageViewController.swift in Sources */,
 				FDF2328727204F2500585739 /* Image.swift in Sources */,
 				FDF232A1272BE47E00585739 /* ImageCell.swift in Sources */,
 				FDF232932720573C00585739 /* Session.swift in Sources */,
+				FDF49589273652A100C6466F /* ImageDetailModel.swift in Sources */,
+				FDF495872736529300C6466F /* ImageDetailPresenter.swift in Sources */,
 				FD72EE66271F098E0019955F /* AppDelegate.swift in Sources */,
 				FDF232952721A46900585739 /* SearchImageModel.swift in Sources */,
 				FD72EE68271F098E0019955F /* SceneDelegate.swift in Sources */,

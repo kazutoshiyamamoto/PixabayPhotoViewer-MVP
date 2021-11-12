@@ -21,7 +21,7 @@ protocol SearchImagePresenterInput {
 // Presenterの出力値を使うViewの処理
 protocol SearchImagePresenterOutput: AnyObject {
     func updateImages(_ images: [Image])
-    func transitionToImageDetail(imageId: Int)
+    func transitionToImageDetail(image: Image)
 }
 
 final class SearchImagePresenter: SearchImagePresenterInput {
@@ -50,7 +50,7 @@ final class SearchImagePresenter: SearchImagePresenterInput {
     
     func didSelectItem(at indexPath: IndexPath) {
         guard let image = image(forItem: indexPath.row) else { return }
-        view.transitionToImageDetail(imageId: image.id)
+        view.transitionToImageDetail(image: image)
     }
     
     func searchImages(query: String?, page: Int) {
