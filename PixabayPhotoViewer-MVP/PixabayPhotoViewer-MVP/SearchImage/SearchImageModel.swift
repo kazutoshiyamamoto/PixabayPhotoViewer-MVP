@@ -23,7 +23,7 @@ final class SearchImageModel: SearchImageModelInput {
         let request = SearchImagesRequest(
             query: query,
             page: page,
-            perPage: nil
+            perPage: 30
         )
         
         Session().send(request) { result in
