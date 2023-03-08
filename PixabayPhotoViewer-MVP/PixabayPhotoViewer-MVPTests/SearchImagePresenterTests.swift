@@ -71,6 +71,7 @@ class SearchImagePresenterTests: XCTestCase {
                                             query: query,
                                             page: page)
                 
+                // mockの画像情報をpresenterの変数imagesに代入する
                 let exp = XCTestExpectation(description: "searchImages内部で呼ばれるupdateImagesの実行を待つ")
                 presenter.searchImages(query: query, page: page)
                 spy.updateImagesCalledWithImages = { images in
@@ -114,7 +115,12 @@ class SearchImagePresenterTests: XCTestCase {
                                             query: query,
                                             page: page)
                 
-                // mockの画像情報をpresenterの変数imagesに代入する
+                // 勉強用メモ
+                // presenterのitemsにStubの変数fetchItemsResponsesの値を代入するためにdisplayItemsを実行する
+                // displayItemsを実行しないと、didSelectRowの内部で早期リターンが起こりテストが失敗してしまう。
+                // 本来実行しない処理displayItemsによってテストが失敗しないように、updateItemsの処理が完了するまで待機する
+                // 直接"presenter.items = stub.fetchItemsResponses"としないのは、itemsがprivate(set)のため
+                // ちなみに、private(set)になっているのは、商品情報の配列に意図しない場所からアクセスされるのを防ぐため
                 let exp = XCTestExpectation(description: "searchImages内部で呼ばれるupdateImagesの実行を待つ")
                 presenter.searchImages(query: query, page: page)
                 spy.updateImagesCalledWithImages = { images in
@@ -137,6 +143,8 @@ class SearchImagePresenterTests: XCTestCase {
                                             query: query,
                                             page: page)
                 
+                // 失敗想定なので待ち時間の設定はなし
+                presenter.displayItems(indicator: .normal)
                 presenter.searchImages(query: query, page: page)
                 
                 XCTAssertTrue(spy.countOfInvokingTransitionToImageDetail == 0)
