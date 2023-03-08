@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FD72EE77271F098F0019955F"
+               BuildableName = "PixabayPhotoViewer-MVPTests.xctest"
+               BlueprintName = "PixabayPhotoViewer-MVPTests"
+               ReferencedContainer = "container:PixabayPhotoViewer-MVP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
