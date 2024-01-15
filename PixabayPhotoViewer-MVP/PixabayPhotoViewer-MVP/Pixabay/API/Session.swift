@@ -23,61 +23,43 @@ final class Session {
     }
     
     @discardableResult
-    func send<T: Request>(_ request: T, completion: @escaping (Result<(T.Response, Pagination), Error>) -> ()) -> URLSessionTask? {
+    func send<T: Request>(_ request: T) async throws -> (T.Response, Pagination) {
         let url = request.baseURL
         
         guard var componets = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
-            completion(.failure(SessionError.failedToCreateComponents(url)))
-            return nil
+            throw SessionError.failedToCreateComponents(url)
         }
         componets.queryItems = request.queryParameters?.compactMap(URLQueryItem.init)
         
         guard var urlRequest = componets.url.map({ URLRequest(url: $0) }) else {
-            completion(.failure(SessionError.failedToCreateURL(componets)))
-            return nil
+            throw SessionError.failedToCreateURL(componets)
         }
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.allHTTPHeaderFields = request.headerFields
         
-        let task = session.dataTask(with: urlRequest) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse else {
-                completion(.failure(SessionError.noResponse))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(SessionError.noData(response)))
-                return
-            }
-            
-            guard  200..<300 ~= response.statusCode else {
-                completion(.failure(SessionError.unacceptableStatusCode(response.statusCode, response.debugDescription)))
-                return
-            }
-            
-            let pagination: Pagination
-            if let page = request.queryParameters?["page"] {
-                let next = Int(page)! + 1
-                pagination = Pagination(next: next)
-            } else {
-                pagination = Pagination(next: nil)
-            }
-            
-            do {
-                let object = try JSONDecoder().decode(T.Response.self, from: data)
-                completion(.success((object, pagination)))
-            } catch {
-                completion(.failure(error))
-            }
+        let (data, response) = try await session.data(for: urlRequest)
+        
+        guard let response = response as? HTTPURLResponse else {
+            throw SessionError.noResponse
         }
         
-        task.resume()
+        guard  200..<300 ~= response.statusCode else {
+            throw SessionError.unacceptableStatusCode(response.statusCode, response.debugDescription)
+        }
         
-        return task
+        let pagination: Pagination
+        if let page = request.queryParameters?["page"] {
+            let next = Int(page)! + 1
+            pagination = Pagination(next: next)
+        } else {
+            pagination = Pagination(next: nil)
+        }
+        
+        do {
+            let object = try JSONDecoder().decode(T.Response.self, from: data)
+            return (object, pagination)
+        } catch {
+            throw error
+        }
     }
 }
