@@ -14,7 +14,7 @@ protocol SearchImagePresenterInput {
     var numberOfImages: Int { get }
     func image(forItem item: Int) -> Image?
     func didSelectItem(at indexPath: IndexPath)
-    func searchImages(query: String?, page: Int)
+    func searchImages(query: String?, page: Int) async
     func clearImages()
 }
 
@@ -53,28 +53,25 @@ final class SearchImagePresenter: SearchImagePresenterInput {
         view.transitionToImageDetail(image: image)
     }
     
-    func searchImages(query: String?, page: Int) {
+    func searchImages(query: String?, page: Int) async {
         guard let query = query else { return }
         guard !query.isEmpty else { return }
 
         self.isFetching = true
-
-        model.fetchImage(query: query, page: page) { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.images.append(contentsOf: response.0)
-                self?.query = query
-                self?.pagination = response.1
-
-                DispatchQueue.main.async {
-                    self?.view.updateImages(self!.images)
-                    self?.isFetching = false
-                }
-            case .failure(let error):
-                // TODO: Error Handling
-                print(error)
-                ()
+        
+        do {
+            let response = try await model.fetchImage(query: query, page: page)
+            self.images.append(contentsOf: response.0)
+            self.query = query
+            self.pagination = response.1
+            
+            DispatchQueue.main.async {
+                self.view.updateImages(self.images)
+                self.isFetching = false
             }
+        } catch {
+            // TODO: Error Handling
+            print(error)
         }
     }
     

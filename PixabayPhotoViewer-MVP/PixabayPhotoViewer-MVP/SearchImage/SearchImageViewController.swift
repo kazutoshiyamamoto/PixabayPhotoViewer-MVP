@@ -43,7 +43,9 @@ extension SearchImageViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.clearImages()
-        presenter.searchImages(query: searchBar.text, page: 1)
+        Task {
+            await presenter.searchImages(query: searchBar.text, page: 1)
+        }
         searchBar.showsCancelButton = false
         searchBar.resignFirstResponder()
     }
@@ -63,9 +65,10 @@ extension SearchImageViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let query = presenter.query, let next = presenter.pagination?.next,
            scrollView.contentSize.height > 0 &&
-            (scrollView.contentSize.height - scrollView.bounds.size.height) <= scrollView.contentOffset.y &&
-            !presenter.isFetching {
-            presenter.searchImages(query: query, page: next)
+            (scrollView.contentSize.height - scrollView.bounds.size.height) <= scrollView.contentOffset.y && !presenter.isFetching {
+            Task {
+                await presenter.searchImages(query: query, page: next)
+            }
         }
     }
 }
